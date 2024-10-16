@@ -65,7 +65,11 @@ enviroment, it can alse be run as:
 . ./quartus_env.sh
 #+end_src
 
-- Note 3: It's important to set the enviroment variables everytime that you start a new shell to run the Quartus, you can achieve this by running the script when starting a new sheel, setting the command above to run in your bash configuration file or setting a cron job.
+#+begin_quote
+[!IMPORTANT]
+It's needed to set the enviroment variables everytime that you start a new shell to run the Quartus, you can achieve this by running the script when starting a new sheel, setting the command above to run in your bash configuration file or setting a cron job.
+#+end_quote
+
 
 *** Error while loading libpng12 before opening the Quartus II GUI
 After setting the enviroment variables, you can try to run the
@@ -124,8 +128,7 @@ Timing-driven compilation section.
 [!TIP]
 If an error that you face don't appear here, i recommend to take a
 look at this [[https://github.com/baioc/quartus-linux][git repository]], it contains some extra informations.
-
-Also feel free to contact me if needed and contribute to this
+Feel free to contact me if needed and contribute to this
 repository with your tips or errors solved.
 #+end_quote
 
