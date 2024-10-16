@@ -4,10 +4,11 @@
 #+TITLE: How to install Quartus II for Linux
 #+AUTHOR: Rayan Raddatz de Matos
 
-** Notes
-
+#+begin_quote
+[!NOTE]
 - This tutorial is made for linux distributions based on Debian.
 - This git repository is based and inspired on https://github.com/baioc/quartus-linux.
+#+end_quote
 
 ** Getting the needed files
 You can download the Quartus II from [[https://www.intel.com/content/www/us/en/software-kit/666220/intel-quartus-ii-web-edition-design-software-version-13-1-for-linux.html][this link]]. In this tutorial I
@@ -120,9 +121,11 @@ Timing-driven compilation section.
 
 ------
 #+begin_quote
+[!TIP]
 If an error that you face don't appear here, i recommend to take a
-look at the git repository that this one is based from the Notes section who contains
-some extra informations or contact me, also feel free to contribute
-with this repository.
+look at this [[https://github.com/baioc/quartus-linux][git repository]], it contains some extra informations.
+
+Also feel free to contact me if needed and contribute to this
+repository with your tips or errors solved.
 #+end_quote
 
