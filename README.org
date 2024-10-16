@@ -30,8 +30,7 @@ This process should be enough to install and open the quartus, but is
 important to keep in mind that some errors can occour inside the
 Quartus II application and also is important to set the enviroment
 variables everytime you run the applications. This said, I highly
-reccomend you to read the section name *Enviroment Variables and
-Library Errors*.
+reccomend you to read the section name *[[https://github.com/rddtz/quartus-for-linux#enviroment-variables-and-library-erros][Enviroment Variables and Library Errors]]*.
 #+end_quote
 
 ** Getting the needed files
