@@ -10,6 +10,30 @@
 - This git repository is based and inspired on https://github.com/baioc/quartus-linux.
 #+end_quote
 
+** Installation Script
+The [[./quartus_installer.sh]] and the [[./quartus_env.sh]] files in this
+repository can be used to download and install the Quartus II 
+software and it's required libraries. You can just run clone this 
+repository and your local machine, set the enviroment variables using
+the ~quartus_env.sh~ with the source command and after running the
+~quartus_installer.sh~ with sudo:
+#+begin_src shell :results output :exports both
+git clone https://github.com/rddtz/quartus-for-linux.git
+cd quartus-for-linux
+source ./quartus_env.sh
+sudo ./quartus_installer.sh
+#+end_src
+
+#+begin_quote
+[!IMPORTANT]
+This process should be enough to install and open the quartus, but is
+important to keep in mind that some errors can occour inside the
+Quartus II application and also is important to set the enviroment
+variables everytime you run the applications. This said, I highly
+reccomend you to read the section name *Enviroment Variables and
+Library Errors*.
+#+end_quote
+
 ** Getting the needed files
 You can download the Quartus II from [[https://www.intel.com/content/www/us/en/software-kit/666220/intel-quartus-ii-web-edition-design-software-version-13-1-for-linux.html][this link]]. In this tutorial I
 will use the full download with devices support included, if you don't need the
@@ -69,7 +93,6 @@ enviroment, it can alse be run as:
 [!IMPORTANT]
 It's needed to set the enviroment variables everytime that you start a new shell to run the Quartus, you can achieve this by running the script when starting a new sheel, setting the command above to run in your bash configuration file or setting a cron job.
 #+end_quote
-
 
 *** Error while loading libpng12 before opening the Quartus II GUI
 After setting the enviroment variables, you can try to run the
