@@ -10,13 +10,22 @@
 - This git repository is based and inspired on https://github.com/baioc/quartus-linux.
 #+end_quote
 
+
+** Getting the needed files
+You can download the Quartus II from [[https://www.intel.com/content/www/us/en/software-kit/666220/intel-quartus-ii-web-edition-design-software-version-13-1-for-linux.html][this link]]. In this tutorial I
+will use the full download with devices support included, if you don't need the
+devices you can download just the Quartus II Setup from the
+/Individual Files/ tab, but notice that the devices are needed to create
+projects.
+
 ** Installation Script
 The [[./quartus_installer.sh]] and the [[./quartus_env.sh]] files in this
 repository can be used to download and install the Quartus II 
-software and it's required libraries. You can just run clone this 
-repository and your local machine, set the enviroment variables using
-the ~quartus_env.sh~ with the source command and after running the
-~quartus_installer.sh~ with sudo:
+software and it's required libraries. You can clone this 
+repository in the same directory where you downloaded the
+~Quartus-web-13.1.0.162-linux.tar~ archive, set the enviroment variables using
+the ~quartus_env.sh~ with the source command and after run the
+~quartus_installer.sh~ with sudo (required to install the libraries):
 #+begin_src shell :results output :exports both
 git clone https://github.com/rddtz/quartus-for-linux.git
 cd quartus-for-linux
@@ -32,13 +41,6 @@ Quartus II application and also is important to set the enviroment
 variables everytime you run the applications. This said, I highly
 reccomend you to read the section name *[[https://github.com/rddtz/quartus-for-linux#enviroment-variables-and-library-erros][Enviroment Variables and Library Errors]]*.
 #+end_quote
-
-** Getting the needed files
-You can download the Quartus II from [[https://www.intel.com/content/www/us/en/software-kit/666220/intel-quartus-ii-web-edition-design-software-version-13-1-for-linux.html][this link]]. In this tutorial I
-will use the full download with devices support included, if you don't need the
-devices you can download just the Quartus II Setup from the
-/Individual Files/ tab, but notice that the devices are needed to create
-projects.
 
 ** Installing the Quartus II
 After downloading the Quartus, you will depare with the

@@ -3,14 +3,10 @@
 C="\033[1;36m"
 CNB="\033[0;36m"
 
-echo -e $C"Downloading the Quartus II software..."
-
-wget https://cdrdv2.intel.com/v1/dl/getContent/666220/666242?filename=Quartus-web-13.1.0.162-linux.tar -O Quartus-web-13.1.0.162-linux.tar
-
 echo -e $C"Extracting files into quartus_files folder..."
 
 mkdir quartus_files
-mv ./Quartus-web-13.1.0.162-linux.tar ./quartus_files
+mv ../Quartus-web-13.1.0.162-linux.tar ./quartus_files
 cd quartus_files
 tar -xf ./Quartus-web-13.1.0.162-linux.tar
 
