@@ -1,0 +1,68 @@
+#+STARTUP: content
+#+STARTUP: overview
+#+STARTUP: indent
+#+TITLE: How to install Quartus II for Linux
+
+- Note 1: This tutorial is made for linux distributions based on Debian.
+- Note 2: This git repository is based on this one -> https://github.com/baioc/quartus-linux.
+- Note 3: This tutorial is mainly for 64-bit architectures. If you are
+running in a 32 bit system, it's importante to see some extra info in
+the git repository linked in note 2.
+
+* Getting the needed files
+You can download the Quartus II from [[https://www.intel.com/content/www/us/en/software-kit/666220/intel-quartus-ii-web-edition-design-software-version-13-1-for-linux.html][this link]]. In this tutorial I
+will use the full download with devices support included, if you don't need the
+devices you can download just the Quartus II Setup from the
+/Individual Files/ tab, but notice that the devices are needed to create
+projects.
+
+* Installing the Quartus II
+After downloading the Quartus, you will depare with the
+~Quartus-web-13.1.0.162-linux.tar~ file. You will need to extract the
+files from the .tar archive, you can use the following command to do this:
+
+#+begin_src shell :results output :exports both
+tar -xf Quartus-web-13.1.0.162-linux.tar
+ls
+#+end_src
+
+#+RESULTS:
+: components  Quartus-web-13.1.0.162-linux.tar  setup.sh
+
+After this you will just need to enter the components directory and execute the
+~QuartusSetupWeb-13.1.0.162.run~ file:
+
+#+begin_src shell :results output :exports both
+cd components
+./QuartusSetupWeb-13.1.0.162.run
+#+end_src
+
+Then the setup wizard will start, it's important that you don't change
+the default installation directory, who should be something like:
+~/home/$(your_user)/altera/13.1~, after clicking next you will need to
+select the devices that you want to install, you can ignore this and
+just continue clicking next until the installation start.
+
+* Enviroment Variables and Library Erros
+After installing, you will see that (probably) some error will
+occour. This errors happen because some of the libraries used by the Quartus
+II have been removed from the distribuition archives of most of the
+debian base distros and also because the Quartus depends on some
+enviroment varibales that are not set by default.
+
+** Setting the require enviroment variables
+This problem is the easiest to solve since you just need to set some
+env variables needed by the Quartus II. You can run the
+[[./quartus_env.sh]] script as show below to set the enviroment variables:
+
+#+begin_src shell :results output :exports both
+source ./quartus_env.sh
+#+end_src
+The source commands is needed to run the script in the current shell
+enviroment, it can be replace with: ~. ./quartus_env.sh~.
+
+- Note 4: It's important to set the enviroment variables everytime that you
+start a new shell to run the Quartus.
+
+** Installing required libraries
+ TO-DO
